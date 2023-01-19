@@ -51,8 +51,7 @@ jobs:
             JIRA_COMMENT_MARKDOWN+="$MARKDOWN_PREFIX [$ISSUE](https://jira.atlassian.com/browse/$ISSUE) $MARKDOWN_CARRIAGE_RETURN"
           done
 
-          echo "JIRA_ISSUE=$JIRA_ISSUE" >> $GITHUB_ENV
-          echo "JIRA_COMMENT_MARKDOWN=$JIRA_COMMENT_MARKDOWN" >> $GITHUB_ENV
+
 
       - name: Create Jira Link comment
         if: steps.lint.outcome == 'success'
